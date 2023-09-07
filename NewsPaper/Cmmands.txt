@@ -1,0 +1,33 @@
+u1 = User.objects.create_user(username='Ivan')
+u2 = User.objects.create_user(username='Ira') 
+Author.objects.create(authorUser=u1)
+Author.objects.create(authorUser=u2) 
+Category.objects.create(name='Спорт')
+Category.objects.create(name='Авто')
+Category.objects.create(name='Технологии')
+Category.objects.create(name='Здоровье')
+author = Author.objects.get(id=2) 
+author1 = Author.objects.get(id=1)
+Post.objects.create(author=author1, categoryType='NW', title='sometitle', text='somebigtext') 
+Post.objects.create(author=author1, categoryType='AR', title='sometitle', text='somebigtext')
+Post.objects.create(author=author, categoryType='AR', title='sometitle', text='somebigtext')  
+Post.objects.get(id=1).postCategory.add(Category.objects.get(id=1))
+Post.objects.get(id=1).postCategory.add(Category.objects.get(id=3)) 
+Post.objects.get(id=2).postCategory.add(Category.objects.get(id=2)) 
+Post.objects.get(id=2).postCategory.add(Category.objects.get(id=4)) 
+Post.objects.get(id=3).postCategory.add(Category.objects.get(id=3)) 
+Post.objects.get(id=3).postCategory.add(Category.objects.get(id=4)) 
+Comment.objects.create(commentPost=Post.objects.get(id=1), commentUser=Author.objects.get(id=1).authorUser, text= 'OK')
+Comment.objects.create(commentPost=Post.objects.get(id=2), commentUser=Author.objects.get(id=1).authorUser, text= 'not OK')
+Comment.objects.create(commentPost=Post.objects.get(id=3), commentUser=Author.objects.get(id=2).authorUser, text= 'text')
+Post.objects.get(id=1).like()     
+Comment.objects.get(id=1).dislike() 
+Comment.objects.get(id=3).dislike()
+Comment.objects.get(id=3).rating   
+Comment.objects.get(id=1).rating 
+Post.objects.get(id=1).rating 
+author.update_rating()
+author1.update_rating()
+Author.objects.order_by('-ratingAuthor').values('authorUser__username', 'ratingAuthor')[0]
+Post.objects.order_by('-rating').values('dateCreation', 'rating', 'title', 'author__authorUser__username')[0]
+Comment.objects.all().order_by("-rating").values("dateCreation", "commentUser", "rating", "text")[0]
