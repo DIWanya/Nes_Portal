@@ -32,7 +32,7 @@ News
                <td>{{ post.dateCreation|date:'d M Y' }}</td>
                <td>{{ post.text|truncatewords:20|censor }}</td>
                <td>
-                   {% for category in category_news_list %}
+                   {% for category in post.postCategory.all %}
                    <a href="{% url 'category_list' category.id %}">{{ category }}</a>
                    {% endfor %}
                </td>

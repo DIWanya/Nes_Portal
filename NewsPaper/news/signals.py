@@ -3,14 +3,14 @@ from django.dispatch import receiver
 from django.db.models.signals import m2m_changed
 from django.template.loader import render_to_string
 from NewsPaper import settings
-from .models import Post
+from .models import PostCategory
 
 
-def send_notifications(preview, pk, title, subscribers):
+def send_notifications(pk, title, subscribers):
     html_content = render_to_string(
         'new_post.html',
         {
-            'text': preview,
+            'text': title,
             'link': f'{settings.SITE_URL}/news/{pk}'
         }
     )
@@ -24,13 +24,13 @@ def send_notifications(preview, pk, title, subscribers):
     msg.send()
 
 
-@receiver(m2m_changed, sender=Post)
+@receiver(m2m_changed, sender=PostCategory)
 def news_created(sender, instance,  **kwargs):
     if kwargs['action'] == 'post_add':
-        categories = instance.PostCategory.all()
+        categories = instance.postCategory.all()
         subscribers_emails = []
-        for categoryThrough in categories:
-            subscribers = categoryThrough.subscribers.all()
+        for category in categories:
+            subscribers = category.subscribers.all()
             subscribers_emails += [s.email for s in subscribers]
 
-        send_notifications(instance.preview(), instance.pk(), instance.title(), subscribers_emails)
+        send_notifications(instance.pk, instance.title, subscribers_emails)
