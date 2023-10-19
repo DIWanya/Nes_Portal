@@ -31,6 +31,8 @@ News
                <td>{{ post.title|censor }}</td>
                <td>{{ post.dateCreation|date:'d M Y' }}</td>
                <td>{{ post.text|truncatewords:20|censor }}</td>
+               {% load cache %}
+                    {% cache 30 sidebar %}
                <td>
                    {% for category in post.postCategory.all %}
                    <a href="{% url 'category_list' category.id %}">{{ category }}</a>
@@ -46,6 +48,7 @@ News
                    <a href="{% url 'ar_delete' post.id %}">Удалить статью</a>
                    {% endif %}
                </td>
+                    {% endcache %}
            </tr>
            {% endfor %}
 

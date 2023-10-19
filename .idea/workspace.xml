@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0472e7db-d46a-4568-8693-8d963c1ff1aa" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/NewsPaper/cache_files/22822f7d5153148c8b5968e42efa7673.djcache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NewsPaper/cache_files/38b9aa0f5001deb03e197fa35a168d56.djcache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NewsPaper/cache_files/57c5822ab08ed23c0e6bbb6773a18872.djcache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NewsPaper/cache_files/771ba10745f9923a3964b10bd1737f15.djcache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NewsPaper/cache_files/91cc181979a27ca39083d54dab8e06b0.djcache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NewsPaper/cache_files/c274ac1fad1744207e2ee3e8039b1cc5.djcache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NewsPaper/cache_files/deff409ee6e0e96ee50eabb5246681ee.djcache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NewsPaper/cache_files/f30c580ac240ac097d6993de2b927bd9.djcache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NewsPaper/news/management/commands/news_delete.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NewsPaper/newsdata.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPaper/NewsPaper/celery.py" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/NewsPaper/celery.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPaper/NewsPaper/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/NewsPaper/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPaper/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPaper/news/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/news/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPaper/news/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/news/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPaper/news/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/news/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPaper/news/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/news/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPaper/templates/ar_create.html" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/templates/ar_create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPaper/templates/ar_delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/templates/ar_delete.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPaper/templates/ar_edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/templates/ar_edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPaper/templates/flatpages/default.html" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/templates/flatpages/default.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPaper/templates/nw_create.html" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/templates/nw_create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPaper/templates/nw_delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/templates/nw_delete.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPaper/templates/nw_edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/templates/nw_edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewsPaper/templates/posts.html" beforeDir="false" afterPath="$PROJECT_DIR$/NewsPaper/templates/posts.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2WzwZw1TC9E81a3R7EgCppdFnkF" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0472e7db-d46a-4568-8693-8d963c1ff1aa" name="Changes" comment="" />
+      <created>1697748784283</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1697748784283</updated>
+    </task>
+    <servers />
+  </component>
+</project>

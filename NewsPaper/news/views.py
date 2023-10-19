@@ -11,6 +11,8 @@ from .forms import PostForm
 from .models import Category
 from .models import Post
 
+from django.core.cache import cache
+
 
 class NewsList(ListView):
     model = Post
@@ -24,11 +26,14 @@ class NewsDetail(DetailView):
     model = Post
     template_name = 'post.html'
     context_object_name = 'post'
+    queryset = Post.objects.all()
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['time'] = datetime
-        return context
+    def get_object(self, *args, **kwargs):
+        obj = cache.get(f'post-{self.kwargs["pk"]}', None)
+        if not obj:
+            obj = super().get_object(queryset=self.queryset)
+            cache.set(f'post-{self.kwargs["pk"]}', obj)
+        return obj
 
 
 class SearchList(ListView):
@@ -37,7 +42,7 @@ class SearchList(ListView):
     context_object_name = 'posts'
 
     def __init__(self, **kwargs):
-        super().__init__(kwargs)
+        super().__init__(**kwargs)
         self.filterset = None
 
     def get_queryset(self):
